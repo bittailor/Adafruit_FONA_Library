@@ -1397,6 +1397,7 @@ boolean Adafruit_FONA::TCPsend(char *packet, uint8_t len) {
 #endif
   DEBUG_PRINTLN();
 
+  flushInput();
 
   mySerial->print(F("AT+CIPSEND="));
   mySerial->println(len);
