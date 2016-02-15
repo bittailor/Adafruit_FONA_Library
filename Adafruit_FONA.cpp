@@ -47,6 +47,7 @@ boolean Adafruit_FONA::begin(Stream &port) {
   digitalWrite(_rstpin, LOW);
   delay(100);
   digitalWrite(_rstpin, HIGH);
+  delay(2000);
 
   DEBUG_PRINTLN(F("Attempting to open comm with ATs"));
   // give 7 seconds to reboot
